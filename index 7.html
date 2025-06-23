@@ -1,0 +1,81 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Appointment Only</title>
+  <style>
+    body {
+      background-color: #000;
+      color: #fff;
+      font-family: "Courier New", Courier, monospace;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 2rem;
+      min-height: 100vh;
+      margin: 0;
+    }
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+      text-transform: uppercase;
+    }
+    p {
+      font-size: 1.2rem;
+      max-width: 600px;
+      margin-bottom: 2rem;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      max-width: 400px;
+      gap: 1rem;
+    }
+    input, textarea, button {
+      padding: 1rem;
+      font-size: 1rem;
+      border: none;
+      font-family: inherit;
+    }
+    input, textarea {
+      background-color: #111;
+      color: #fff;
+      border-bottom: 2px solid #555;
+    }
+    button {
+      background-color: #fff;
+      color: #000;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    button:hover {
+      background-color: #444;
+      color: #fff;
+    }
+    footer {
+      margin-top: 3rem;
+      font-size: 0.8rem;
+      opacity: 0.6;
+    }
+  </style>
+</head>
+<body>
+  <h1>Appointment Only</h1>
+  <p>Based in NYC. Access by request only.</p>
+  <form name="membership" method="POST" data-netlify="true">
+    <input type="hidden" name="form-name" value="membership">
+    <input type="text" name="name" placeholder="Your Name" required />
+    <input type="email" name="email" placeholder="Your Email" required />
+    <textarea name="message" rows="5" placeholder="Why do you want access?" required></textarea>
+    <button type="submit">Request Access</button>
+  </form>
+  <footer>
+    &copy; 2025 Appointment Only NYC
+  </footer>
+</body>
+</html>
